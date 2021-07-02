@@ -2,7 +2,7 @@ set -ex
 
 # [START create_instance]
 MY_INSTANCE_NAME="sendgrid-flask-instance"
-ZONE=us-east1
+ZONE=us-east1-c
 
 gcloud compute instances create $MY_INSTANCE_NAME \
     --image-family=debian-10 \

@@ -8,8 +8,9 @@ sudo bash install-logging-agent.sh
 
 # Install or update needed software
 apt-get update
-apt-get install -yq git supervisor python python-pip
-pip install --upgrade pip virtualenv
+apt-get install 
+apt-get install -yq git supervisor python3 python3-pip python3-venv
+pip3 install --upgrade pip virtualenv
 
 # Account to own server process
 useradd -m -d /home/pythonapp pythonapp
@@ -19,7 +20,7 @@ export HOME=/root
 git clone https://github.com/skysada/sendgrid-flask-app.git /opt/app
 
 # Python environment setup
-virtualenv -p python3 /opt/app/env
+python3 -m venv /opt/app/env
 source /opt/app/env/bin/activate
 /opt/app/env/bin/pip install -r /opt/app/requirements.txt
 
